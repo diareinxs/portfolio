@@ -1,0 +1,114 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header__menu {
+    display: none; /* Hidden by default on small screens */
+}
+
+.header__bars {
+    color: var(--clr-light);
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+    display: block; /* Mobile menu icon displayed on small screens */
+}
+
+.header__button {
+    display: block;
+    margin-left: auto; /* Push the button to the right */
+    padding: 0.5rem 1rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    border: none;
+    cursor: pointer;
+}
+
+/* xs*/
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+@media (min-width: 768px) {
+    .header__menu {
+        display: flex; /* Show menu on medium screens and above */
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        gap: 2em;
+    }
+
+    .header__link {
+        font-size: var(--size-xs);
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--clr-slate600);
+        letter-spacing: -0.05em;
+        transition: color 0.3s;
+    }
+
+    .header__link:hover {
+        color: var(--clr-blue);
+    }
+
+    .header__line {
+        border: 1px solid var(--clr-slate600);
+        padding-top: 1.5em;
+    }
+
+    .header__sun {
+        display: block;
+        color: var(--clr-slate600);
+        width: var(--size-base);
+        height: var(--size-base);
+    }
+
+    .header__resume {
+        font-size: var(--size-xs);
+    }
+
+    .header__bars {
+        display: none; /* Hide the menu icon on medium and larger screens */
+    }
+
+    .header__button {
+        margin-left: auto; /* Keep button aligned to the right */
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .header__link {
+        font-size: var(--size-sm);
+    }
+
+    .header__sun {
+        width: var(--size-xl);
+        height: var(--size-xl);
+    }
+
+    .header__resume {
+        font-size: var(--size-sm);
+    }
+
+    .header__menu {
+        gap: 3em; /* Increased spacing between menu items */
+    }
+
+    .header__button {
+        font-size: var(--size-sm); /* Adjust button size for larger screens */
+        padding: 1rem 2rem;
+    }
+}
+
+/* xL */
+/* @media (min-width: 1280px) {} */
+
+/* 2xL */
+/* @media (min-width: 1536px) {} */
